@@ -1,0 +1,60 @@
+{
+  "Procedure_BonusIncrement" : {
+    "procedureString" : "CALL DB2INST1.BONUS_INCREASE(?,?,?,?,?,?)",
+    "parameters" : [ {
+      "name" : "P_BONUSFACTOR",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "2",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "P_BONUSMAXSUMFORDEPT",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "8",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "P_DEPTSWITHOUTNEWBONUSES",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "P_COUNTDEPTSVIEWED",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "P_COUNTDEPTSBONUSCHANGED",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "P_ERRORMSG",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  }
+}

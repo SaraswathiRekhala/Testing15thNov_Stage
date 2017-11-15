@@ -1,0 +1,443 @@
+{
+  "Procedure_INOUT" : {
+    "name" : "Procedure_INOUT",
+    "description" : "INOUT param",
+    "version" : "V2",
+    "procedureString" : "EXEC dbo.getCharOUT @CHARCOL_OUTPUT= :CHARCOL_OUTPUT,@PKID= :PKID",
+    "parameters" : [ {
+      "name" : "CHARCOL_OUTPUT",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "S",
+      "required" : true,
+      "parameterType" : "IN_OUT"
+    }, {
+      "name" : "PKID",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : true,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.testing15thnov_stage.db123__.models.procedure.ProcedureInoutResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "CHARCOL_OUTPUT",
+        "fieldName" : "charcolOutput",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "Procedure_Insert" : {
+    "name" : "Procedure_Insert",
+    "description" : "Insert procedure",
+    "version" : "V2",
+    "procedureString" : "EXEC dbo.INSERTWITHBLOB @ASSIGNEDID= :ASSIGNEDID,@BYTECOL= :BYTECOL,@SHORTCOL= :SHORTCOL,@INTCOL= :INTCOL,@FLOATCOL= :FLOATCOL,@LONGCOL= :LONGCOL,@DOUBLECOL= :DOUBLECOL,@BIGINTCOL= :BIGINTCOL,@BIGDECCOL= :BIGDECCOL,@CHARCOL= :CHARCOL,@STRINGCOL= :STRINGCOL,@TEXTCOL= :TEXTCOL,@CLOBCOL= :CLOBCOL,@DATECOL= :DATECOL,@DATETIMECOL= :DATETIMECOL,@TIMECOL= :TIMECOL,@TIMESTAMPCOL= :TIMESTAMPCOL,@BOOLEANCOL= :BOOLEANCOL,@BLOBCOL= :BLOBCOL",
+    "parameters" : [ {
+      "name" : "ASSIGNEDID",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "12112",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "BYTECOL",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_ID",
+      "testValue" : "12",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "SHORTCOL",
+      "type" : "short",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "89",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "INTCOL",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "898",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "FLOATCOL",
+      "type" : "float",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "987.98",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "LONGCOL",
+      "type" : "long",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "87",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "DOUBLECOL",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "878",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "BIGINTCOL",
+      "type" : "big_integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "8797",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "BIGDECCOL",
+      "type" : "big_decimal",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "789.98790",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "CHARCOL",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "f",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "STRINGCOL",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "jhsdjhf",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "TEXTCOL",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "vbhjg",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "CLOBCOL",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "ghhgh",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "DATECOL",
+      "type" : "date",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "DATE",
+      "testValue" : "2017-11-15",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "DATETIMECOL",
+      "type" : "datetime",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "DATE_TIME",
+      "testValue" : "2017-11-15T15:18:01",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "TIMECOL",
+      "type" : "time",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "TIME",
+      "testValue" : "16:18:11",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "TIMESTAMPCOL",
+      "type" : "datetime",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "2017-11-15T15:18:27",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "BOOLEANCOL",
+      "type" : "boolean",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : true,
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "BLOBCOL",
+      "type" : "blob",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : { },
+      "required" : true,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : true,
+      "typeRef" : "com.testing15thnov_stage.db123__.models.procedure.ProcedureInsertRequest",
+      "method" : "POST"
+    },
+    "response" : {
+      "typeRef" : "java.lang.Void",
+      "returns" : "PRIMITIVE",
+      "responseType" : "SINGLE"
+    }
+  },
+  "Procedure_OnlyINParam" : {
+    "name" : "Procedure_OnlyINParam",
+    "description" : "Only ID",
+    "version" : "V2",
+    "procedureString" : "EXEC dbo.defaultProc @id= :id",
+    "parameters" : [ {
+      "name" : "id",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : true,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.testing15thnov_stage.db123__.models.procedure.ProcedureOnlyInparamResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "content",
+        "fieldName" : "content",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.testing15thnov_stage.db123__.models.procedure.ProcedureOnlyInparamResponseContent",
+          "list" : true,
+          "properties" : [ {
+            "name" : "ASSIGNED ID",
+            "fieldName" : "assignedId",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "BYTE COL",
+            "fieldName" : "byteCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Byte",
+              "list" : false
+            }
+          }, {
+            "name" : "SHORT COL",
+            "fieldName" : "shortCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          }, {
+            "name" : "INT COL",
+            "fieldName" : "intCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "FLOAT COL",
+            "fieldName" : "floatCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "LONG COL",
+            "fieldName" : "longCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Long",
+              "list" : false
+            }
+          }, {
+            "name" : "DOUBLE COL",
+            "fieldName" : "doubleCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.math.BigDecimal",
+              "list" : false
+            }
+          }, {
+            "name" : "BIGINT COL",
+            "fieldName" : "bigintCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.math.BigInteger",
+              "list" : false
+            }
+          }, {
+            "name" : "BIGDEC COL",
+            "fieldName" : "bigdecCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.math.BigDecimal",
+              "list" : false
+            }
+          }, {
+            "name" : "CHAR COL",
+            "fieldName" : "charCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "STRING COL",
+            "fieldName" : "stringCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "TEXT COL",
+            "fieldName" : "textCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "CLOB COL",
+            "fieldName" : "clobCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "DATE COL",
+            "fieldName" : "dateCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.sql.Date",
+              "list" : false
+            }
+          }, {
+            "name" : "DATETIME COL",
+            "fieldName" : "datetimeCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "org.joda.time.LocalDateTime",
+              "list" : false
+            }
+          }, {
+            "name" : "TIME COL",
+            "fieldName" : "timeCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.sql.Time",
+              "list" : false
+            }
+          }, {
+            "name" : "TIMESTAMP COL",
+            "fieldName" : "timestampCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "org.joda.time.LocalDateTime",
+              "list" : false
+            }
+          }, {
+            "name" : "BOOLEAN COL",
+            "fieldName" : "booleanCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Boolean",
+              "list" : false
+            }
+          }, {
+            "name" : "BLOB COL",
+            "fieldName" : "blobCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "byte[]",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  }
+}

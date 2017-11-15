@@ -1,0 +1,82 @@
+{
+  "username" : "db2inst1",
+  "password" : "7b6a43524a2429176262362e4c5c783a172653",
+  "url" : "jdbc:db2://54.153.6.135:50000/SAMPLE:progressiveStreaming=2;",
+  "driverClass" : "com.ibm.db2.jcc.DB2Driver",
+  "dialect" : "org.hibernate.dialect.DB2Dialect",
+  "serviceId" : "SAMPLE",
+  "packageName" : "com.testing15thnov_stage.sample",
+  "dbType" : "DB2",
+  "host" : "54.153.6.135",
+  "dbName" : "SAMPLE",
+  "port" : "50000",
+  "schemaName" : "DB2INST1",
+  "tableFilter" : [ {
+    "table" : "ALLTYPES",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "ALLTYPES_DB",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "ALLTYPES_DB_HIST",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "BUSINESSUNIT",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "HIST_POLICY_INFO",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "HIST_POLICY_INFO_BTT",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "POLICY_ATT",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "POLICY_ATT1",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "POLICY_ATT_HIST",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "POLICY_ATT_VIEW",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "POLICY_HISTORY",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "POLICY_INFO_ATT_OVERLAP_NOT_PK",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "POLICY_INFO_ATT_WITHOUT_OVERLAP",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "POLICY_STT_PERIOD_IMPLICITY_HIDDEN",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "TESTRELORDER",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "TESTRELORDERCHILD",
+    "schema" : "DB2INST1"
+  }, {
+    "table" : "USERLOGIN",
+    "schema" : "DB2INST1"
+  } ],
+  "schemaFilter" : [ "DB2INST1" ],
+  "impersonateUser" : false,
+  "activeDirectoryDomain" : null,
+  "hbm2ddl" : "none",
+  "maxPageSize" : 100,
+  "minPoolSize" : 2,
+  "maxPoolSize" : 4,
+  "transactionTimeout" : 30,
+  "dataSourceType" : "WM_MANAGED_DATASOURCE",
+  "jndiName" : "",
+  "reloadInfo" : {
+    "reload" : false,
+    "reason" : null,
+    "message" : null
+  },
+  "readOnly" : true
+}

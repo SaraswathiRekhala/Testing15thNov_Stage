@@ -1,0 +1,185 @@
+{
+  "Procedure_2Cursors" : {
+    "name" : "Procedure_2Cursors",
+    "description" : "2Cursors",
+    "version" : "V2",
+    "procedureString" : "CALL HR.PROC2CURSORS(:REGIONSDATA,:JOBSDATA)",
+    "parameters" : [ {
+      "name" : "REGIONSDATA",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "JOBSDATA",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.testing15thnov_stage.wmstudio.models.procedure.Procedure2cursorsResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "REGIONSDATA",
+        "fieldName" : "regionsdata",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.testing15thnov_stage.wmstudio.models.procedure.Procedure2cursorsResponseRegionsdata",
+          "list" : true,
+          "properties" : [ {
+            "name" : "REGION_ID",
+            "fieldName" : "regionId",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.math.BigDecimal",
+              "list" : false
+            }
+          }, {
+            "name" : "REGION_NAME",
+            "fieldName" : "regionName",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      }, {
+        "name" : "JOBSDATA",
+        "fieldName" : "jobsdata",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.testing15thnov_stage.wmstudio.models.procedure.Procedure2cursorsResponseJobsdata",
+          "list" : true,
+          "properties" : [ {
+            "name" : "JOB_ID",
+            "fieldName" : "jobId",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "JOB_TITLE",
+            "fieldName" : "jobTitle",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "MIN_SALARY",
+            "fieldName" : "minSalary",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "MAX_SALARY",
+            "fieldName" : "maxSalary",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "Procedure_SingleCursorAndOut" : {
+    "name" : "Procedure_SingleCursorAndOut",
+    "description" : "Single Cursor and Single OUT",
+    "version" : "V2",
+    "procedureString" : "CALL HR.TESTCURSOUT(:REGIONSDATA,:MAX_SAL)",
+    "parameters" : [ {
+      "name" : "REGIONSDATA",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "MAX_SAL",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.testing15thnov_stage.wmstudio.models.procedure.ProcedureSingleCursorAndOutResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "REGIONSDATA",
+        "fieldName" : "regionsdata",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.testing15thnov_stage.wmstudio.models.procedure.ProcedureSingleCursorAndOutResponseRegionsdata",
+          "list" : true,
+          "properties" : [ {
+            "name" : "REGION_ID",
+            "fieldName" : "regionId",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.math.BigDecimal",
+              "list" : false
+            }
+          }, {
+            "name" : "REGION_NAME",
+            "fieldName" : "regionName",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      }, {
+        "name" : "MAX_SAL",
+        "fieldName" : "maxSal",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Integer",
+          "list" : false
+        }
+      } ]
+    }
+  }
+}

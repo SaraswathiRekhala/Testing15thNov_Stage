@@ -6,7 +6,7 @@ var _WM_APP_PROPERTIES = {
   "homePage" : "Main",
   "name" : "Testing15thNov_Stage",
   "platformType" : "WEB",
-  "securityEnabled" : "false",
+  "securityEnabled" : "true",
   "supportedLanguages" : "en",
   "timeFormat" : "",
   "type" : "APPLICATION",

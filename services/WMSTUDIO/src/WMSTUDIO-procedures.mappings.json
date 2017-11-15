@@ -1,0 +1,46 @@
+{
+  "Procedure_2Cursors" : {
+    "procedureString" : "CALL HR.PROC2CURSORS(?,?)",
+    "parameters" : [ {
+      "name" : "REGIONSDATA",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "JOBSDATA",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "Procedure_SingleCursorAndOut" : {
+    "procedureString" : "CALL HR.TESTCURSOUT(?,?)",
+    "parameters" : [ {
+      "name" : "REGIONSDATA",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "MAX_SAL",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  }
+}

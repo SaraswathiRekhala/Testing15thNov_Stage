@@ -41,6 +41,27 @@
             </resource>
             <resource>
                 <filtering>true</filtering>
+                <directory>services/SAMPLE/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
+                <directory>services/WMSTUDIO/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
+                <directory>services/db123__/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
                 <directory>services/dbscenarios/src</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
@@ -149,6 +170,9 @@
                                 <source>services/EmailValidation/src</source>
                                 <source>services/HeartRateService/src</source>
                                 <source>services/MyJavaService/src</source>
+                                <source>services/SAMPLE/src</source>
+                                <source>services/WMSTUDIO/src</source>
+                                <source>services/db123__/src</source>
                                 <source>services/dbscenarios/src</source>
                                 <source>services/fdaService/src</source>
                                 <source>services/salesdb/src</source>
@@ -326,16 +350,35 @@
             <version>2.3.3</version>
         </dependency>
         <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.38</version>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>9.4.1208.jre7</version>
+        </dependency>
+        <dependency>
+            <groupId>db2jcc4__2_</groupId>
+            <artifactId>db2jcc4__2_</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/db2jcc4__2_.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>ojdbc7</groupId>
+            <artifactId>ojdbc7</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/ojdbc7.jar</systemPath>
+        </dependency>
+        <dependency>
             <groupId>sqljdbc42</groupId>
             <artifactId>sqljdbc42</artifactId>
             <version>1.0</version>
             <scope>system</scope>
             <systemPath>${basedir}/lib/sqljdbc42.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.38</version>
         </dependency>
     </dependencies>
     <dependencyManagement>

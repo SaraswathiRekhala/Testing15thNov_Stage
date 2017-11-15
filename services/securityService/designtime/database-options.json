@@ -1,0 +1,19 @@
+{
+  "modelName" : "db123__",
+  "entityName" : "ShortUsertable",
+  "tableName" : "SHORT_USERTABLE",
+  "unamePropertyName" : "username",
+  "unameColumnName" : "USERNAME",
+  "uidPropertyName" : "userId",
+  "uidColumnName" : "USER ID",
+  "pwPropertyName" : "password",
+  "pwColumnName" : "PASSWORD",
+  "rolePropertyName" : "role",
+  "roleColumnName" : "ROLE",
+  "useRolesQuery" : false,
+  "rolesByUsernameQuery" : "",
+  "tenantIdField" : null,
+  "defTenantId" : 0,
+  "tenantIdPropertyName" : null,
+  "queryType" : "HQL"
+}

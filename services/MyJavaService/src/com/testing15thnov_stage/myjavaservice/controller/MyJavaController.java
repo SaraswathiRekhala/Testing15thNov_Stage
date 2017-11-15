@@ -2,7 +2,7 @@
 package com.testing15thnov_stage.myjavaservice.controller;
 
 import com.testing15thnov_stage.myjavaservice.MyJavaService;
-import com.testing15thnov_stage.dbscenarios.PersonBackup1;
+import com.testing15thnov_stage.dbscenarios.PersonBackup;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.MediaType;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +20,7 @@ public class MyJavaController {
     private MyJavaService myJavaService;
 
     @RequestMapping(value = "/andUpdate", method = RequestMethod.POST)
-    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
-    @ApiOperation(value = "")
-    public PersonBackup1 createAndUpdate(@RequestBody PersonBackup1 person) {
+    public PersonBackup createAndUpdate(@RequestBody PersonBackup person) {
         return myJavaService.createAndUpdate(person);
     }
 }

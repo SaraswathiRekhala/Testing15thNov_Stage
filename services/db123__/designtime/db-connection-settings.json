@@ -1,0 +1,43 @@
+{
+  "username" : "sa",
+  "password" : "7b6a43524a353f3a664c733d4e537670477c612a43",
+  "url" : "jdbc:sqlserver://52.12.227.219:1433;databaseName=123-@",
+  "driverClass" : "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+  "dialect" : "com.wavemaker.runtime.data.dialect.WMSQLServerDialect",
+  "serviceId" : "db123__",
+  "packageName" : "com.testing15thnov_stage.db123__",
+  "dbType" : "SQLServer",
+  "host" : "52.12.227.219",
+  "dbName" : "123-@",
+  "port" : "1433",
+  "schemaName" : "dbo",
+  "tableFilter" : [ {
+    "table" : "DEFAULT VALUES",
+    "schema" : "dbo"
+  }, {
+    "table" : "SHORTSEQT_SERVERDEF",
+    "schema" : "dbo"
+  }, {
+    "table" : "SHORT_USERTABLE",
+    "schema" : "dbo"
+  }, {
+    "table" : "UNIQUE ID",
+    "schema" : "dbo"
+  } ],
+  "schemaFilter" : [ "dbo" ],
+  "impersonateUser" : false,
+  "activeDirectoryDomain" : null,
+  "hbm2ddl" : "none",
+  "maxPageSize" : 100,
+  "minPoolSize" : 2,
+  "maxPoolSize" : 4,
+  "transactionTimeout" : 30,
+  "dataSourceType" : "WM_MANAGED_DATASOURCE",
+  "jndiName" : "",
+  "reloadInfo" : {
+    "reload" : false,
+    "reason" : null,
+    "message" : null
+  },
+  "readOnly" : false
+}

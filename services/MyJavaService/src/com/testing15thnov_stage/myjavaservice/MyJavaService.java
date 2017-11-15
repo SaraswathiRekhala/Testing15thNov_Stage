@@ -13,8 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.wavemaker.runtime.security.SecurityService;
 import com.wavemaker.runtime.service.annotations.ExposeToClient;
 import com.wavemaker.runtime.service.annotations.HideFromClient;
-import com.testing15thnov_stage.dbscenarios.service.PersonBackup1Service;
-import com.testing15thnov_stage.dbscenarios.PersonBackup1;
+import com.testing15thnov_stage.dbscenarios.service.PersonBackupService;
+import com.testing15thnov_stage.dbscenarios.PersonBackup;
 //import com.testing15thnov_stage.myjavaservice.model.*;
 
 /**
@@ -33,7 +33,7 @@ public class MyJavaService {
     private static final Logger logger = LoggerFactory.getLogger(MyJavaService.class);
 
     @Autowired
-    private PersonBackup1Service personBackUp;
+    private PersonBackupService personBackUp;
     
     @Autowired
     private SecurityService securityService;
@@ -48,8 +48,8 @@ public class MyJavaService {
      * caller's request/response objects respectively. These parameters will be injected when request is made (during API invocation).
      */
      
-     public PersonBackup1 createAndUpdate(PersonBackup1 person){
-        PersonBackup1 person1=personBackUp.create(person);
+     public PersonBackup createAndUpdate(PersonBackup person){
+        PersonBackup person1=personBackUp.create(person);
          return personBackUp.update(person1);
      }
 }

@@ -2,7 +2,80 @@
     <wm-header content="header" name="header" height="auto"></wm-header>
     <wm-top-nav name="topnav" content="topnav"></wm-top-nav>
     <wm-content name="content">
-        <wm-page-content columnwidth="12" name="mainContent" padding="unset 15px"></wm-page-content>
+        <wm-page-content columnwidth="12" name="mainContent" padding="unset 15px">
+            <wm-tabs name="tabs1">
+                <wm-tabpane name="tabpane1" title="SALESDB_REPSDATA">
+                    <wm-table name="executeSV_RepsDataTable1" title="Reps" dataset="bind:Variables.SV_RepsData.dataSet" navigation="Pager" exportformat="EXCEL,CSV">
+                        <wm-table-column binding="zip" caption="Zip" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="picurl" caption="Picurl" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="password" caption="Password" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="role" caption="Role" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="city" caption="City" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="street" caption="Street" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="name" caption="Name" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="channelType" caption="Channel Type" edit-widget-type="number" type="long" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="id" caption="Id" edit-widget-type="number" type="long" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="state" caption="State" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="username" caption="Username" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                    </wm-table>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane2" title="SALESDB_CUSTOMJOINS">
+                    <wm-table name="executeSV_CustomJoinsTable1" title="Reps &amp; Quotes Data" dataset="bind:Variables.SV_CustomJoins.dataSet" navigation="Basic" exportformat="EXCEL,CSV">
+                        <wm-table-column binding="countRepsId" caption="Count Reps Id" edit-widget-type="number" type="long" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="name" caption="Name" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="countRepsChanneltype" caption="Count Reps Channeltype" edit-widget-type="number" type="long" show="true" readonly="false"></wm-table-column>
+                        <wm-table-column binding="estimatedSale" caption="Estimated Sale" edit-widget-type="number" type="long" show="true" readonly="false"></wm-table-column>
+                    </wm-table>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane3" title="Insert States Data">
+                    <wm-form errormessage="" captionposition="top" title="Form" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.SalesdbExecuteSV_InsertStates.dataSet" captionalign="left" name="executeSV_InsertStatesForm1">
+                        <wm-layoutgrid columns="1" name="layoutgrid1">
+                            <wm-gridrow name="gridrow1">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn1">
+                                    <wm-form-field readonly="false" name="ABBREVATION" displayname="Abbrevation" key="ABBREVATION" type="string" show="true" widget="text"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow2">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn2">
+                                    <wm-form-field readonly="false" name="STATE_NAME" displayname="State Name" key="STATE_NAME" type="string" show="true" widget="text"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                        <wm-buttongroup horizontalalign="right" class="form-action col-md-12" name="buttongroup1">
+                            <wm-button caption="Reset" type="reset" class="btn-secondary" name="button2"></wm-button>
+                            <wm-button caption="Cancel" type="button" class="btn-warning" name="button3"></wm-button>
+                            <wm-button caption="Save" type="submit" class="btn-primary" name="button4"></wm-button>
+                        </wm-buttongroup>
+                    </wm-form>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane7" title="Products Table With Validators">
+                    <wm-table editmode="quickedit" name="ProductsTable1" title="Products List" dataset="bind:Variables.SalesdbProductsData.dataSet" navigation="Basic">
+                        <wm-table-column binding="id" caption="Id" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-table-column>
+                        <wm-table-column binding="name" caption="Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" required="true"></wm-table-column>
+                        <wm-table-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow()"></wm-table-row-action>
+                    </wm-table>
+                </wm-tabpane>
+            </wm-tabs>
+            <wm-tabs name="tabs2">
+                <wm-tabpane name="tabpane4" title="FDA Service">
+                    <wm-list listclass="list-group" itemclass="list-group-item" template="true" itemsperrow="xs-1 sm-1 md-4 lg-4" class="media-list" name="fdaServiceList1" dataset="bind:Variables.FdaServiceInvoke.dataSet.results" navigation="Pager">
+                        <wm-listtemplate layout="inline" name="listtemplate1">
+                            <wm-container class="media-body" padding="unset unset unset 1.25em" name="container2">
+                                <wm-label name="Name" class="p media-heading" caption="bind:Variables.FdaServiceInvoke.dataSet.results.term" fontsize="1.143" fontunit="em"></wm-label>
+                                <wm-label name="JobTitle" caption="bind:Variables.FdaServiceInvoke.dataSet.results.count" class="p text-muted"></wm-label>
+                            </wm-container>
+                            <wm-container class="media-right media-top" name="container3">
+                                <wm-button class="btn-transparent" iconclass="wi wi-share fa-2x" name="button1"></wm-button>
+                            </wm-container>
+                        </wm-listtemplate>
+                    </wm-list>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane5" title="EmailValidation">
+                    <wm-label padding="unset 0.5em" name="label3" caption="bind:Variables.EmailValidationService.dataSet"></wm-label>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane6"></wm-tabpane>
+            </wm-tabs>
+        </wm-page-content>
     </wm-content>
     <wm-footer name="footer" content="footer"></wm-footer>
 </wm-page>

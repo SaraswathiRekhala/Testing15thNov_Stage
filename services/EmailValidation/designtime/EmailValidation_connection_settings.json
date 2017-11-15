@@ -1,0 +1,29 @@
+{
+  "endpointAddress" : "https://metropolis-api-email.p.mashape.com/analysis",
+  "method" : "GET",
+  "headers" : {
+    "X-Mashape-Key" : [ "Unq8yHDhtYmshPxVfe7jQrrv7scpp15IBcijsnXrLcm2pJzoDH" ]
+  },
+  "redirectEnabled" : true,
+  "requestBody" : "",
+  "queryParams" : {
+    "email" : "support@imaginea.com"
+  },
+  "authDetails" : null,
+  "contentType" : "application/json",
+  "multiParamInfoList" : null,
+  "sampleHttpResponseDetails" : {
+    "statusCode" : 200,
+    "headers" : {
+      "Content-Type" : [ "application/json" ],
+      "Date" : [ "Wed, 15 Nov 2017 04:47:55 GMT" ],
+      "Server" : [ "Mashape/5.0.6" ],
+      "X-Clacks-Overhead" : [ "GNU Terry Pratchett" ],
+      "Content-Length" : [ "81" ],
+      "Connection" : [ "keep-alive" ]
+    },
+    "responseBody" : "{\"api-message\":\"\",\"domain\":\"imaginea.com\",\"valid\":true,\"recoded-email\":\"\"}",
+    "convertedResponse" : null
+  },
+  "proxy" : null
+}

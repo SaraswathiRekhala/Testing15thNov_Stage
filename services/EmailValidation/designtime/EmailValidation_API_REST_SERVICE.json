@@ -1,0 +1,83 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "x-WM-API_ID" : "0a9747f5-50f5-4aca-830e-bbf4d35933eb",
+    "x-WM-SERVICE_ID" : "p",
+    "x-WM-SERVICE_TYPE" : "RestService"
+  },
+  "host" : "metropolis-api-email.p.mashape.com",
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/EmailValidation/invoke/analysis" : {
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "operationId" : "EmailValidation_RestServiceVirtualController-invoke",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "X-Mashape-Key",
+          "in" : "header",
+          "description" : "X-Mashape-Key",
+          "required" : false,
+          "type" : "string",
+          "items" : {
+            "type" : "string"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String"
+        }, {
+          "name" : "email",
+          "in" : "query",
+          "description" : "email",
+          "required" : false,
+          "type" : "string",
+          "format" : "string",
+          "x-WM-EDITABLE" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-BASE_PATH" : "/EmailValidation/invoke/analysis",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.EmailValidation.scheme}://${rest.EmailValidation.host}${rest.EmailValidation.basepath}/analysis"
+    }
+  },
+  "definitions" : {
+    "RootResponse" : {
+      "required" : [ "api-message", "domain", "recoded-email", "valid" ],
+      "properties" : {
+        "valid" : {
+          "type" : "boolean"
+        },
+        "recoded-email" : {
+          "type" : "string"
+        },
+        "domain" : {
+          "type" : "string"
+        },
+        "api-message" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "EmailValidation.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  }
+}

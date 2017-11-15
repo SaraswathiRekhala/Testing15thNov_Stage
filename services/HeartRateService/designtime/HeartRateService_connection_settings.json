@@ -1,0 +1,15 @@
+{
+  "endpointAddress" : "wss://websocket-demos.wavemakeronline.com/websocket/heartrate",
+  "method" : "GET",
+  "contentType" : "",
+  "sampleRequestBody" : "",
+  "authType" : "NONE",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleWebSocketResponse" : {
+    "responseBody" : "{\"time\":1510727251750,\"value\":98}",
+    "convertedResponse" : null,
+    "statusCode" : 0,
+    "contentType" : ""
+  }
+}

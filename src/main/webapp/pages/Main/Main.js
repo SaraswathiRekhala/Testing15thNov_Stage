@@ -15,3 +15,24 @@ Application.$controller("MainPageController", ["$scope", function ($scope) {
     };
 
 }]);
+
+Application.$controller("executeSV_RepsDataTable1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("executeSV_CustomJoinsTable1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
+
+Application.$controller("ProductsTable1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);

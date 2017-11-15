@@ -1,0 +1,221 @@
+{
+  "SV_CustomJoins" : {
+    "name" : "SV_CustomJoins",
+    "description" : "Custom Joins",
+    "version" : "V2",
+    "queryString" : "select COUNT(R.ID) AS COUNT_REPS_ID,R.NAME,COUNT(R.CHANNEL_TYPE) AS COUNT_REPS_CHANNELTYPE, Q.ESTIMATED_SALE FROM REPS R LEFT JOIN QUOTES Q ON R.ID=Q.REP_ID GROUP BY R.ID,R.NAME,R.CHANNEL_TYPE,Q.ESTIMATED_SALE ORDER BY R.NAME",
+    "countQueryString" : "select count(*) from (select COUNT(R.ID) AS COUNT_REPS_ID,R.NAME,COUNT(R.CHANNEL_TYPE) AS COUNT_REPS_CHANNELTYPE, Q.ESTIMATED_SALE FROM REPS R LEFT JOIN QUOTES Q ON R.ID=Q.REP_ID GROUP BY R.ID,R.NAME,R.CHANNEL_TYPE,Q.ESTIMATED_SALE ORDER BY R.NAME) wmTempTable",
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.testing15thnov_stage.salesdb.models.query.SvCustomJoinsResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "PAGINATED",
+      "properties" : [ {
+        "name" : "COUNT_REPS_ID",
+        "fieldName" : "countRepsId",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.math.BigInteger",
+          "list" : false
+        }
+      }, {
+        "name" : "NAME",
+        "fieldName" : "name",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "COUNT_REPS_CHANNELTYPE",
+        "fieldName" : "countRepsChanneltype",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.math.BigInteger",
+          "list" : false
+        }
+      }, {
+        "name" : "ESTIMATED_SALE",
+        "fieldName" : "estimatedSale",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.math.BigInteger",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "SV_InsertStates" : {
+    "name" : "SV_InsertStates",
+    "description" : "Insert States Data",
+    "version" : "V2",
+    "queryString" : "insert into STATES(NAME,ABBREV) values(:STATE_NAME,:ABBREVATION)",
+    "countQueryString" : "select count(*) from (insert into STATES(NAME,ABBREV) values(:STATE_NAME,:ABBREVATION)) wmTempTable",
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "INSERT",
+    "parameters" : [ {
+      "name" : "STATE_NAME",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "HYD",
+      "required" : true
+    }, {
+      "name" : "ABBREVATION",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "HY",
+      "required" : true
+    } ],
+    "request" : {
+      "wrapped" : true,
+      "typeRef" : "com.testing15thnov_stage.salesdb.models.query.SvInsertStatesRequest",
+      "method" : "POST"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "java.lang.Integer",
+      "returns" : "ENTITY",
+      "responseType" : "SINGLE"
+    }
+  },
+  "SV_RepsData" : {
+    "name" : "SV_RepsData",
+    "description" : "Reps Data",
+    "version" : "V2",
+    "queryString" : "select * from REPS",
+    "countQueryString" : "select count(*) from (select * from REPS) wmTempTable",
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.testing15thnov_stage.salesdb.models.query.SvRepsDataResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "PAGINATED",
+      "properties" : [ {
+        "name" : "ID",
+        "fieldName" : "id",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.math.BigInteger",
+          "list" : false
+        }
+      }, {
+        "name" : "NAME",
+        "fieldName" : "name",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "CHANNEL_TYPE",
+        "fieldName" : "channelType",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.math.BigInteger",
+          "list" : false
+        }
+      }, {
+        "name" : "STREET",
+        "fieldName" : "street",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "CITY",
+        "fieldName" : "city",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "STATE",
+        "fieldName" : "state",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "ZIP",
+        "fieldName" : "zip",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "PICURL",
+        "fieldName" : "picurl",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "PASSWORD",
+        "fieldName" : "password",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "ROLE",
+        "fieldName" : "role",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "USERNAME",
+        "fieldName" : "username",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  }
+}

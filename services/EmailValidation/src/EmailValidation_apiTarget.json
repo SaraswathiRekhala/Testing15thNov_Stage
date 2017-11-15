@@ -1,0 +1,83 @@
+{
+  "basePath" : "${rest.EmailValidation.basepath}",
+  "paths" : {
+    "/analysis" : {
+      "x-WM-BASE_PATH" : "/analysis",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-RELATIVE_PATH" : "",
+      "get" : {
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "operationId" : "EmailValidation_RestServiceVirtualController-invoke",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "in" : "header",
+          "name" : "X-Mashape-Key",
+          "description" : "X-Mashape-Key",
+          "type" : "string",
+          "items" : {
+            "type" : "string"
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "email",
+          "format" : "string",
+          "description" : "email",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "RestServiceVirtualController" ],
+        "consumes" : [ "application/json" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.EmailValidation.scheme}://${rest.EmailValidation.host}${rest.EmailValidation.basepath}/analysis"
+    }
+  },
+  "host" : "${rest.EmailValidation.host}",
+  "schemes" : [ "${rest.EmailValidation.scheme}" ],
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "EmailValidation.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "api-message", "domain", "recoded-email", "valid" ],
+      "properties" : {
+        "valid" : {
+          "type" : "boolean"
+        },
+        "recoded-email" : {
+          "type" : "string"
+        },
+        "domain" : {
+          "type" : "string"
+        },
+        "api-message" : {
+          "type" : "string"
+        }
+      }
+    }
+  },
+  "swagger" : "2.0",
+  "info" : {
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "x-WM-API_ID" : "0a9747f5-50f5-4aca-830e-bbf4d35933eb",
+    "x-WM-SERVICE_ID" : "p",
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService"
+  },
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ]
+}

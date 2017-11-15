@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <sql-query name="SV_RepsData">
+        <![CDATA[
+        select * from REPS
+        ]]>
+    </sql-query>
+
+    <sql-query name="SV_RepsData__count">
+        <![CDATA[
+        select count(*) from (select * from REPS) wmTempTable
+        ]]>
+    </sql-query>
+
+    <sql-query name="SV_CustomJoins">
+        <![CDATA[
+        select COUNT(R.ID) AS COUNT_REPS_ID,R.NAME,COUNT(R.CHANNEL_TYPE) AS COUNT_REPS_CHANNELTYPE, Q.ESTIMATED_SALE FROM REPS R LEFT JOIN QUOTES Q ON R.ID=Q.REP_ID GROUP BY R.ID,R.NAME,R.CHANNEL_TYPE,Q.ESTIMATED_SALE ORDER BY R.NAME
+        ]]>
+    </sql-query>
+
+    <sql-query name="SV_CustomJoins__count">
+        <![CDATA[
+        select count(*) from (select COUNT(R.ID) AS COUNT_REPS_ID,R.NAME,COUNT(R.CHANNEL_TYPE) AS COUNT_REPS_CHANNELTYPE, Q.ESTIMATED_SALE FROM REPS R LEFT JOIN QUOTES Q ON R.ID=Q.REP_ID GROUP BY R.ID,R.NAME,R.CHANNEL_TYPE,Q.ESTIMATED_SALE ORDER BY R.NAME) wmTempTable
+        ]]>
+    </sql-query>
+
+    <sql-query name="SV_InsertStates">
+        <![CDATA[
+        insert into STATES(NAME,ABBREV) values(:STATE_NAME,:ABBREVATION)
+        ]]>
+    <query-param name="STATE_NAME" type="java.lang.String"/>
+    <query-param name="ABBREVATION" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="SV_InsertStates__count">
+        <![CDATA[
+        select count(*) from (insert into STATES(NAME,ABBREV) values(:STATE_NAME,:ABBREVATION)) wmTempTable
+        ]]>
+    <query-param name="STATE_NAME" type="java.lang.String"/>
+    <query-param name="ABBREVATION" type="java.lang.String"/>
+    </sql-query>
+</hibernate-mapping>

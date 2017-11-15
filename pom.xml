@@ -13,6 +13,41 @@
             </resource>
             <resource>
                 <filtering>true</filtering>
+                <directory>services/Calculator/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
+                <directory>services/EmailValidation/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
+                <directory>services/HeartRateService/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
+                <directory>services/fdaService/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
+                <directory>services/salesdb/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
                 <directory>services/securityService/src</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
@@ -96,6 +131,11 @@
                         </goals>
                         <configuration>
                             <sources>
+                                <source>services/Calculator/src</source>
+                                <source>services/EmailValidation/src</source>
+                                <source>services/HeartRateService/src</source>
+                                <source>services/fdaService/src</source>
+                                <source>services/salesdb/src</source>
                                 <source>services/securityService/src</source>
                             </sources>
                         </configuration>
@@ -263,6 +303,18 @@
             <artifactId>servlet-api</artifactId>
             <version>2.5</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>2.3.3</version>
+        </dependency>
+        <dependency>
+            <groupId>sqljdbc42</groupId>
+            <artifactId>sqljdbc42</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/sqljdbc42.jar</systemPath>
         </dependency>
     </dependencies>
     <dependencyManagement>

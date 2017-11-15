@@ -1,0 +1,157 @@
+{
+  "username" : "root",
+  "password" : "7b6a43524a322c0c6e6166771a1378700d662158",
+  "url" : "jdbc:mysql://54.189.223.203:3306/dbscenarios?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull",
+  "driverClass" : "com.mysql.jdbc.Driver",
+  "dialect" : "com.wavemaker.runtime.data.dialect.MySQLDialect",
+  "serviceId" : "dbscenarios",
+  "packageName" : "com.testing15thnov_stage.dbscenarios",
+  "dbType" : "MySQL",
+  "host" : "54.189.223.203",
+  "dbName" : "dbscenarios",
+  "port" : "3306",
+  "schemaName" : null,
+  "tableFilter" : [ {
+    "table" : "ALL EXTERNAL TYPES",
+    "schema" : null
+  }, {
+    "table" : "ALL TYPES",
+    "schema" : null
+  }, {
+    "table" : "AllTypesWithoutSpace",
+    "schema" : null
+  }, {
+    "table" : "AutoWire_Procedure1000NullTitles",
+    "schema" : null
+  }, {
+    "table" : "BLOBTABLE_PROCEDURE",
+    "schema" : null
+  }, {
+    "table" : "BLOBTYPES",
+    "schema" : null
+  }, {
+    "table" : "BlobTypeIdentifier",
+    "schema" : null
+  }, {
+    "table" : "DATETIME_TABLE",
+    "schema" : null
+  }, {
+    "table" : "DATE_TABLE",
+    "schema" : null
+  }, {
+    "table" : "PersonBackup",
+    "schema" : null
+  }, {
+    "table" : "PersonBackup1",
+    "schema" : null
+  }, {
+    "table" : "Persons",
+    "schema" : null
+  }, {
+    "table" : "T ONE2ONE C",
+    "schema" : null
+  }, {
+    "table" : "T ONE2ONE P",
+    "schema" : null
+  }, {
+    "table" : "T UC COMPOSITES1",
+    "schema" : null
+  }, {
+    "table" : "T UC COMPOSITES2",
+    "schema" : null
+  }, {
+    "table" : "TABLE10",
+    "schema" : null
+  }, {
+    "table" : "TABLE11",
+    "schema" : null
+  }, {
+    "table" : "TABLE20",
+    "schema" : null
+  }, {
+    "table" : "TABLE20$",
+    "schema" : null
+  }, {
+    "table" : "TABLE32",
+    "schema" : null
+  }, {
+    "table" : "TABLE33",
+    "schema" : null
+  }, {
+    "table" : "TABLE36",
+    "schema" : null
+  }, {
+    "table" : "TABLE5",
+    "schema" : null
+  }, {
+    "table" : "TABLE8",
+    "schema" : null
+  }, {
+    "table" : "TIMESTAMP_COL",
+    "schema" : null
+  }, {
+    "table" : "T_COMPOSITES_MANY2ONE",
+    "schema" : null
+  }, {
+    "table" : "T_COMPOSITES_MANY2ONE1",
+    "schema" : null
+  }, {
+    "table" : "T_ONE2ONE_COMPOSITES",
+    "schema" : null
+  }, {
+    "table" : "T_ONE2ONE_COMPOSITES1",
+    "schema" : null
+  }, {
+    "table" : "T_UC_ONE2ONE CHILD",
+    "schema" : null
+  }, {
+    "table" : "T_UC_ONE2ONE PARENT",
+    "schema" : null
+  }, {
+    "table" : "UC",
+    "schema" : null
+  }, {
+    "table" : "UNIQUEGROUPING",
+    "schema" : null
+  }, {
+    "table" : "UP",
+    "schema" : null
+  }, {
+    "table" : "USER_LOGIN",
+    "schema" : null
+  }, {
+    "table" : "VIEW_ALLTYPES",
+    "schema" : null
+  }, {
+    "table" : "VIRTUAL_TABLE",
+    "schema" : null
+  }, {
+    "table" : "ZERO_AS_PK",
+    "schema" : null
+  }, {
+    "table" : "account",
+    "schema" : null
+  }, {
+    "table" : "bigIntTypes",
+    "schema" : null
+  }, {
+    "table" : "new_table$",
+    "schema" : null
+  } ],
+  "schemaFilter" : [ ],
+  "impersonateUser" : false,
+  "activeDirectoryDomain" : null,
+  "hbm2ddl" : "none",
+  "maxPageSize" : 100,
+  "minPoolSize" : 2,
+  "maxPoolSize" : 4,
+  "transactionTimeout" : 30,
+  "dataSourceType" : "WM_MANAGED_DATASOURCE",
+  "jndiName" : "",
+  "reloadInfo" : {
+    "reload" : false,
+    "reason" : null,
+    "message" : null
+  },
+  "readOnly" : false
+}

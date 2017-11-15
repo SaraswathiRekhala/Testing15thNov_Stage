@@ -3,6 +3,8 @@
     <import resource="classpath:Calculator.spring.xml"/>
     <import resource="classpath:EmailValidation.spring.xml"/>
     <import resource="classpath:HeartRateService.spring.xml"/>
+    <import resource="classpath:MyJavaService.spring.xml"/>
+    <import resource="classpath:dbscenarios.spring.xml"/>
     <import resource="classpath:fdaService.spring.xml"/>
     <import resource="classpath:salesdb.spring.xml"/>
     <import resource="classpath:securityService.spring.xml"/>

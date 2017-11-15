@@ -15,13 +15,19 @@
     "table" : "DEFAULT VALUES",
     "schema" : "dbo"
   }, {
-    "table" : "SHORTSEQT_SERVERDEF",
-    "schema" : "dbo"
-  }, {
     "table" : "SHORT_USERTABLE",
     "schema" : "dbo"
   }, {
+    "table" : "SHORTSEQT_SERVERDEF",
+    "schema" : "dbo"
+  }, {
     "table" : "UNIQUE ID",
+    "schema" : "dbo"
+  }, {
+    "table" : "VIEW_DEFAULT_VALUES",
+    "schema" : "dbo"
+  }, {
+    "table" : "VIEW_SHORTUSERTABLE",
     "schema" : "dbo"
   } ],
   "schemaFilter" : [ "dbo" ],

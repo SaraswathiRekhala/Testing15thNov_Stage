@@ -20,6 +20,8 @@ public class MyJavaController {
     private MyJavaService myJavaService;
 
     @RequestMapping(value = "/andUpdate", method = RequestMethod.POST)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @ApiOperation(value = "")
     public PersonBackup createAndUpdate(@RequestBody PersonBackup person) {
         return myJavaService.createAndUpdate(person);
     }
